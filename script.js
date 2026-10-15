@@ -162,10 +162,10 @@
         return String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
     }
 
-    // Reads a duration input, clamped to its min/max (defaults 1–60).
+    // Reads a duration input, clamped to its min/max (defaults 1–90).
     function readSeconds(input) {
         const min = Number(input.min) || 1;
-        const max = Number(input.max) || 60;
+        const max = Number(input.max) || 90;
         const value = Math.round(Number(input.value));
         if (!Number.isFinite(value)) return min;
         return Math.min(max, Math.max(min, value));

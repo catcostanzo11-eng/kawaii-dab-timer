@@ -4,7 +4,7 @@ A cute, simple timer for dabbing. Set a dab duration and a rest duration, press 
 
 ## Features
 
-- Adjustable dab and rest durations (1–60 seconds)
+- Adjustable dab and rest durations (1–90 seconds)
 - Start, pause/resume and reset
 - A beep at the end of each step
 - Six themes: Kawaii, Strawberry Swirl, Blueberry Sky, Cherry Blossom, Sunset Glow and Minty Fresh (your last pick is remembered)

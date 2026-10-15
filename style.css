@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700&display=swap");
+
+/* Theme colors. script.js overrides these when a theme is picked. */
+:root {
+    --bg: #fff0f6;
+    --surface: #ffffff;
+    --text: #ff69b4;
+    --accent: #ff69b4;
+    --accent-text: #ffffff;
+    --pixel-font: "Press Start 2P", cursive;
+    --body-font: "Nunito", system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--body-font);
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    font-family: var(--pixel-font);
+    color: var(--text);
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    margin: 20px 0 30px;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+/* Cards */
+.card {
+    background-color: var(--surface);
+    color: var(--text);
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+    box-shadow: 0 6px 0 var(--accent);
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+/* Timer display */
+#timer {
+    font-family: var(--pixel-font);
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    margin: 10px 0;
+}
+
+#phaseLabel {
+    font-weight: 700;
+    min-height: 1.5em;
+}
+
+/* Buttons (overrides Bootstrap's colors so they follow the theme) */
+.btn {
+    font-family: var(--body-font);
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 8px 20px;
+    margin: 6px;
+}
+
+#startButton,
+#stopButton,
+#resetButton {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 2px solid var(--accent);
+}
+
+#stopButton,
+#resetButton {
+    background-color: var(--surface);
+    color: var(--accent);
+}
+
+#startButton:hover:not(:disabled),
+#stopButton:hover:not(:disabled),
+#resetButton:hover:not(:disabled) {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
+
+/* Theme buttons keep their Bootstrap outline colors as previews;
+   the selected one is filled in by the .active class from script.js. */
+[id^="theme"].active {
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* Settings inputs */
+.form-control {
+    max-width: 160px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    color: var(--text);
+    background-color: var(--surface);
+}
+
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Footer text and links */
+a {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+a:hover {
+    color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+    .btn:hover {
+        transform: none !important;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A cute, simple dab timer with adjustable dab and rest durations and kawaii themes.">
+        <title>Kawaii Dab Timer!</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main class="container">
+            <h1 class="text-center">Kawaii Dab Timer!</h1>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2 id="timer" class="display-4" aria-live="polite">00:00</h2>
+                            <button id="startButton" class="btn btn-primary">Start</button>
+                            <button id="stopButton" class="btn btn-danger">Stop</button>
+                            <button id="resetButton" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3>Settings</h3>
+                            <label for="dabDuration">Dab Duration (seconds):</label>
+                            <input type="number" id="dabDuration" value="10" min="1" max="60" class="form-control mb-2">
+                            <label for="restDuration">Rest Duration (seconds):</label>
+                            <input type="number" id="restDuration" value="5" min="1" max="60" class="form-control mb-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3>Instructions</h3>
+                            <p>Set your desired dab and rest durations, then click "Start" to begin the timer. The timer will count down your dab duration, followed by your rest duration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3>Themes</h3>
+                            <p>Choose from a variety of themes to customize your timer experience.</p>
+                            <button id="theme1" class="btn btn-outline-primary">Kawaii</button>
+                            <button id="theme2" class="btn btn-outline-secondary">Strawberry Swirl</button>
+                            <button id="theme3" class="btn btn-outline-success">Blueberry Sky</button>
+                            <button id="theme4" class="btn btn-outline-danger">Cherry Blossom</button>
+                            <button id="theme5" class="btn btn-outline-warning">Sunset Glow</button>
+                            <button id="theme6" class="btn btn-outline-info">Minty Fresh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h3>About</h3>
+                            <p>This is a simple timer for dabbing, designed to help you keep track of your dab and rest durations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="container">
+            <p>MIT License. Free for personal and commercial use. Open Source.</p>
+            <p>Developed by Kawaii Dab Enthusiasts.</p>
+            <p><a href="https://ko-fi.com/catalistair" target="_blank" rel="noopener">Donate</a> to support this site!</p>
+        </footer>
+    </body>
+</html>
